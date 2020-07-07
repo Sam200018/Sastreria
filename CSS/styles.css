@@ -1,4 +1,38 @@
-body{
-    font-family: 'Barlow', sans-serif;
-    margin: 0;
+body {
+  font-family: "Barlow", sans-serif;
+  margin: 0px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: white;
+}
+.header_logo img {
+  height: 100px;
+}
+.header_container{
+    border-top: 2px solid #393e46;
+    border-bottom: 2px solid #393e46;
+    padding: 0 200px;
+}
+.header_container-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header_nav-item{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.header_nav-item:hover{
+    text-decoration: underline;
+    color: #d65a31;
+}
+.hero{
+    margin-top: 180px;
 }
