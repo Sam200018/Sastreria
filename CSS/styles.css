@@ -34,5 +34,21 @@ body {
     color: #d65a31;
 }
 .hero{
-    margin-top: 180px;
+    margin-top: 150px;
+}
+.hero_container{
+  border: 5px solid black;
+  height: 500px;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+}
+.hero_container-botton{
+  background-color: #393e46;
+  width: 168px;
+  height: 30px;
+  padding-top: 7px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
 }
