@@ -22,8 +22,8 @@ body {
   border-top: 2px solid #393e46;
   border-bottom: 2px solid #393e46;
   padding: 0 200px;
-  background-color: #3b6978 ;
-  opacity: 0.3;
+  background-color: #393E46 ;
+  /* opacity: 0.3; */
 }
 .header_container-nav {
   display: flex;
@@ -38,26 +38,8 @@ body {
 }
 .header_nav-item:hover {
   text-decoration: underline;
-  color: black;
-  font-weight: bold;
-}
-.footer {
-  height: 80px;
-  background-color: #222831;
-  display: flex;
-  text-align: right;
-  justify-content: space-evenly;
-}
-.footer a {
-  text-decoration: none;
   color: white;
-  font-size: 15px;
-  text-transform: uppercase;
-  width: 110px;
-  height: 20px;
-}
-.footer a:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 .hero {
   margin-top: 150px;
@@ -79,7 +61,7 @@ body {
 }
                   
 .hero_container-botton {
-  background-color: #393e46;
+  background-color: #204051;
   width: 168px;
   height: 30px;
   padding-top: 7px;
@@ -87,6 +69,24 @@ body {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+}
+.footer {
+  height: 80px;
+  background-color: #d65a31;
+  display: flex;
+  text-align: right;
+  justify-content: space-evenly;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  width: 110px;
+  height: 20px;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 
@@ -109,7 +109,7 @@ body {
   margin-bottom: 31.5px;
 }
 .styles_container-botton {
-  background-color: #393e46;
+  background-color: #204051;
   width: 168px;
   height: 30px;
   padding-top: 7px;
@@ -201,7 +201,7 @@ body {
 
 /* ServicesPage */
 .services{
-  margin-top: 10px;
+  margin-bottom: 20px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -215,7 +215,7 @@ body {
 }
 .services_container{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 .services_container_img{
