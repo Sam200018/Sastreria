@@ -169,8 +169,7 @@ body {
   text-transform: uppercase;
 }
 .more {
-  margin-top: 0;
-  border: 1px solid blue;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,9 +177,10 @@ body {
 .more_container {
   padding: 20px 0;
   text-align: center;
+  margin-right: 5px;
 }
 .more_container-img {
-  border: 1px solid gray;
+  object-fit: contain;
 }
 .more_container a {
   text-decoration: none;
@@ -229,4 +229,9 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   text-align: justify;
+}
+.services_container_img.bordado{
+  background-image: url(/images/BordadoC.jpg);
+  background-position: center;
+  background-size: cover;
 }
