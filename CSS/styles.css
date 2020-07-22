@@ -102,11 +102,17 @@ body {
 .styles_container-title {
   font-family: "Barlow", sans-serif;
   font-size: 26px;
-  padding: 73px 250px 73px 250px;
+  padding: 40px 250px 40px 250px;
+  margin-bottom: 0;
+  margin-top: 0;
   text-transform: uppercase;
 }
 .styles_container-img {
   margin-bottom: 31.5px;
+  width: 300px;
+  height: 300px;
+  align-self: center;
+  object-fit: cover;
 }
 .styles_container-botton {
   background-color: #204051;
@@ -118,7 +124,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   align-self: center;
-  margin-bottom: 31.5px;
+  margin-bottom: 40px;
 }
 .fabrics_container {
   margin-top: 0;
