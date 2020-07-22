@@ -54,6 +54,11 @@ body {
   align-items: center;
   width: 100%;
 }
+.hero_container.img{
+  background-image: url("/images/hero.JPG");
+  background-position: center;
+  background-size: cover;
+}
 .hero_title{
   align-self: center;
   font-size: 30px;
@@ -234,4 +239,10 @@ body {
   background-image: url(/images/BordadoC.jpg);
   background-position: center;
   background-size: cover;
+}
+.services_container_img.puntada{
+  background-image: url(/images/puntada.JPG);
+  background-position: center;
+  background-size: cover;
+  
 }
