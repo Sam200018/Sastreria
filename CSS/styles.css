@@ -12,10 +12,12 @@ body {
   width: 100%;
   display: flex;
   background-color: #204051 ;
-  height: 75px;
+  height: 95px;
 }
 .header_logo img {
   height: 75px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .header_container {
   display: flex;
@@ -36,7 +38,7 @@ body {
   font-weight: bold;
 }
 .hero {
-  margin-top: 75px;
+  margin-top: 95px;
   display: flex;
   flex-direction: column;
 }
