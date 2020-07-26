@@ -247,6 +247,7 @@ body {
 .services_container_img.puntada{
   background-image: url(/images/puntada.JPG);
   background-position: center;
-  background-size: cover;
-  
+  background-size: cover; 
 }
+
+/* cotizador */
