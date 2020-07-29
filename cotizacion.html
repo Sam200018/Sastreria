@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <a class="header_logo" href="#">
+        <a class="header_logo" href="/">
             <img src="/images/LogoSastreriaC.svg" alt="Logo Sastreria" />
         </a>
         <nav class="header_container">
@@ -21,13 +21,94 @@
         </nav>
     </header>
     <main class="hero">
-        <div class="hero_container quote">
-            imagen de un traje enorme<br>
-
-            <!-- <a class="hero_container-botton" href="/">Comprar Ahora</a> -->
-        </div>
+        <p class="hero_title">
+            <span>
+                Quiero Cotizar un traje
+            </span>
+        </p>
     </main>
+    <section>
+        <div>imagen de saco del traje</div>
+        <div>
+            <p>Completa los siguientes Datos</p>
+            <form>
+                <div>
+                    <label for="Telas">tipo de tela
+                        <select name="telas" id="telas" aria-placeholder="telas">
+                            <option value="Echura">Personalida(Echura)</option>
+                            <option value="GranoOriginal">Grano Original</option>
+                            <option value="GranoLavable">Grano Lavable</option>
+                            <option value="Tricotina">Tricotina</option>
+                            <option value="TricotinaEco">Tricotina Economica</option>
+                            <option value="Top">Top Santiago</option>
+                            <option value="TopRayado">Top Santiago Rayado(166)</option>
+                        </select>
+                    </label>
+                    <label for="numero de trajes">Numero trajes
+                        <input type="number">
+                    </label>
+                    <label for="Nacional">Envio Nacional
+                        <input type="checkbox" name="envioNac" value="envio">
+                    </label>
+                    <label for="Internacional">Envio Internacional
+                        <input type="checkbox" name="envioInter" value="envio">
+                    </label>
+                    <label for="Saco">Saco
+                        <input type="checkbox" name="Saco1" value="Saco1">
+                    </label>
+                    <label for="Chaleco">Chaleco
+                        <input type="checkbox" name="Chaleco2" value="Chaleco2">
+                    </label>
+                    <label for="Pantalon">Pantalón
+                        <input type="checkbox" name="Pantalon3" value="Pantalon3">
+                    </label>
+                    
+                </div>
+                <div>
 
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div>imagen del chaleco del traje</div>
+        <div>
+            <p>Detalles sobre el diseño del traje</p>
+            <form>
+                <div><!--esto es para separar la cuestion de selección de la parte de los costos -->
+                    <label for="Bordado">Bordado
+                        <input type="checkbox" name="Bordado" value="Bordado">
+                    </label>
+                    <label for="Greca">Greca
+                        <input type="checkbox" name="Greca" value="Greca">
+                    </label>
+                    <label for="Botonadura">Botonadura
+                        <input type="checkbox" name="Botonadura" value="Botonadura">
+                    </label>
+                    <label for="Diseño">Diseño
+                        <input type="number" name="Diseño" id="Diseño">
+                    </label>
+                    <label for="Tamanio">Tamaño
+                        <select name="Tamanio" id="Tamanio">
+                            <option value="Grande">Grande</option>
+                            <option value="Mediano">Mediano</option>
+                            <option value="Pequeño">Grande</option>
+                        </select>
+                    </label>
+                    <label for="BordadoPerso">Bordado Personalizado
+                        <input type="checkbox" name="Perso" id="Perso">
+                    </label>
+                </div>
+                <div><!--precios reflejados -->
+
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div></div>
+        <div></div>
+    </section>
     <footer class="footer">
             <a href="/">Servicio Al Cliente</a>
             <a href="/">Atención Al Cliente</a>
