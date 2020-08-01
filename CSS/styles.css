@@ -11,7 +11,7 @@ body {
   left: 0;
   width: 100%;
   display: flex;
-  background-color: #204051 ;
+  background-color: #E8E8EA ;
   height: 95px;
 }
 .header_logo img {
@@ -28,14 +28,14 @@ body {
 }
 .header_nav-item {
   text-decoration: none;
-  color: #ebebeb;
+  color: #303030;
   text-transform: uppercase;
   margin-right: 10px;
   transition: font-weight 0.2s;
 }
 .header_nav-item:hover {
   text-decoration: underline;
-  color: #ebebeb;
+  color: #222831;
   font-weight: bold;
 }
 .hero {
@@ -63,7 +63,7 @@ body {
 }
                   
 .hero_container-botton {
-  background-color: #204051;
+  background-color: #d65a31;
   width: 168px;
   height: 30px;
   padding-top: 7px;
@@ -74,7 +74,7 @@ body {
 }
 .footer {
   height: 80px;
-  background-color: #84a9ac;
+  background-color: #2B2B2B;
   display: flex;
   text-align: right;
   justify-content: space-evenly;
@@ -118,7 +118,7 @@ body {
   object-fit: cover;
 }
 .styles_container-botton {
-  background-color: #204051;
+  background-color: #d65a31;
   width: 168px;
   height: 30px;
   padding-top: 7px;
@@ -168,7 +168,7 @@ body {
   font-size: 26px;
 }
 .fabrics_element-botton {
-  background-color: #204051;
+  background-color: #d65a31;
   width: 168px;
   height: 30px;
   padding-top: 7px;
@@ -326,45 +326,53 @@ body {
 /* cotización */
 .traje{
   display: flex;
-  margin: 20px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   justify-content: center;
-  height: 400px;
+  height: 500px;
 }
-.traje_img.saco{
+.traje_img{
   border:1px solid gray;
-  height: 400px;
-  width: 50%;
+  height: 500px;
+  width: 600px;
   margin-right: 10px;
 }
+.traje_img.saco{
+  /* imgen del caso */
+}
 .traje_cotizacion{
-  border: 3px solid #4f8a8b;
-  border-radius: 5px;
-  align-items: center;
+  border: 3px solid #d65a31;
+  border-radius: 20px;
   font-size: 20px;
+  width: 500px;
 }
 .traje_cotizacion_title{
   text-align: center;
   padding-bottom: 10px;
-  border-bottom: 3px solid #4f8a8b;
+  border-bottom: 3px solid #d65a31;
+  margin-top: 10px;
 }
 .traje_cotizacion_selection{
   display: flex;
   margin: 10px;
+  height: 70%;
+}
+.traje_cotizacion_selection_principal_data{
+  width: 325px;
 }
 .cotizacion_selection_form{
   display: flex;
   flex-direction: column;
 }
 label{
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .opciones{
   position: static;
   font-family: inherit;
   height: 30px;
   color: white;
-  background-color: #24a19c;
+  background-color: #4b5d67;
 }
 .opciones select {
   display: none; /*hide original SELECT element: */
@@ -374,11 +382,17 @@ label{
   font-family: inherit;
   height: 23px;
   color: white;
-  background-color: #24a19c;
+  background-color: #4b5d67;
   width: 35px;
 }
-
 .check{
   width: 15px;
   height: 15px;
 }
+.prices{
+  width: 300px;
+}
+.littlewords{
+  font-size: 10px;
+}
+

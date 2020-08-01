@@ -76,88 +76,99 @@
             </div>
         </div>
     </section>
-    <section>
-        <div>imagen del chaleco del traje</div>
-        <div>
-            <p>Detalles sobre el diseño del traje</p>
-            <form>
-                <div><!--esto es para separar la cuestion de selección de la parte de los costos -->
-                    <label for="Bordado">Bordado
-                        <input type="checkbox" name="Bordado" value="Bordado">
-                    </label>
-                    <label for="Greca">Greca
-                        <input type="checkbox" name="Greca" value="Greca">
-                    </label>
-                    <label for="Botonadura">Botonadura
-                        <input type="checkbox" name="Botonadura" value="Botonadura">
-                    </label>
-                    <label for="Diseño">Diseño
-                        <input type="number" name="Diseño" id="Diseño">
-                    </label>
-                    <label for="Tamanio">Tamaño
-                        <select name="Tamanio" id="Tamanio">
-                            <option value="Grande">Grande</option>
-                            <option value="Mediano">Mediano</option>
-                            <option value="Pequeño">Grande</option>
-                        </select>
-                    </label>
-                    <label for="BordadoPerso">Bordado Personalizado
-                        <input type="checkbox" name="Perso" id="Perso">
-                    </label>
+    <section class="traje">
+        <div class="traje_img chaleco">imagen del chaleco del traje</div>
+        <div class="traje_cotizacion">
+            <p class="traje_cotizacion_title">
+                <span>
+                    Detalles sobre el diseño del traje
+                </span>
+            </p>
+            <div class="traje_cotizacion_selection">
+                <div class="traje_cotizacion_selection_principal_data">
+                    <form class="cotizacion_selection_form"><!--esto es para separar la cuestion de selección de la parte de los costos -->
+                            <label for="Bordado">Bordado
+                                <input class="check" type="checkbox" name="Bordado" value="Bordado">
+                            </label>
+                            <label for="Greca">Greca
+                                <input class="check" type="checkbox" name="Greca" value="Greca">
+                            </label>
+                            <label for="Botonadura">Botonadura
+                                <input class="check" type="checkbox" name="Botonadura" value="Botonadura">
+                            </label>
+                            <label for="Diseño">Diseño
+                                <input class="numbers" type="number" name="Diseño" id="Diseño">
+                            </label>
+                            <label for="Tamanio">Tamaño
+                                <select class="opciones" name="Tamanio" id="Tamanio">
+                                    <option value="0">Grande</option>
+                                    <option value="1">Mediano</option>
+                                    <option value="2">Grande</option>
+                                </select>
+                            </label>
+                            <label for="BordadoPerso">Bordado Personalizado
+                                <input class="check" type="checkbox" name="Perso" id="Perso">
+                            </label>
+                    </form>
                 </div>
-                <div><!--precios reflejados -->
-
+                <div class="traje_cotizacion_selection prices">
+                    <p>hola soy el precio</p>
                 </div>
-            </form>
-            <p>*los numeros de los diseños están en el apartado de <a href="#">stock</a></p>
+            </div>
+            <p class="littlewords">*los numeros de los diseños están en el apartado de <a href="#">stock</a></p>
         </div>
     </section>
-    <section>
-        <div>imagén de Pantalon del traje</div>
-        <div>
-            <p>Lugares de ocupación del diseño</p>
-            <form>
-                <div>
-
+    <section class="traje">
+        <div class="traje_img chaleco">imagén de Pantalon del traje</div>
+        <div class="traje_cotizacion">
+            <p class="traje_cotizacion_title">
+                <span>
+                    Lugares de ocupación del diseño
+                </span>
+            </p>
+            <div class="traje_cotizacion_selection">
+                <div class="traje_cotizacion_selection_principal_data">
+                    <form class="cotizacion_selection_form">
+                        <label for="Solapa">Solapa
+                            <input class="check" type="checkbox" name="Solapa" id="Solapa">
+                        </label>
+                        <label for="Hombros">Hombros
+                            <input class="check" type="checkbox" name="Hombros" id="Hombros">
+                        </label>
+                        <label for="Espalda">Espalda
+                            <input class="check" type="checkbox" name="Espalda" id="Espalda">
+                        </label>
+                        <label for="Mangas">Mangas
+                            <input class="check" type="checkbox" name="Mangas" id="Mangas">
+                        </label>
+                        <label for="Broches">Broches
+                            <input class="check" type="checkbox" name="Broches" id="Broches">
+                        </label>
+                        <label for="BrochesChaleco">Broches Chaleco
+                            <input class="check" type="checkbox" name="BrochesChaleco" id="BrochesChaleco">
+                        </label>
+                        <label for="BolsasChicas">Bolsas Chicas
+                            <input class="check" type="checkbox" name="BolsasChicas" id="BolsasChicas">
+                        </label>
+                        <label for="BolsasGrandes">Bolsas Grandes
+                            <input class="check" type="checkbox" name="BolsaGrandes" id="BolsasGrandes">
+                        </label>
+                        <label for="Pantalon">Pantalon
+                            <input class="check" type="checkbox" name="Pantalon" id="Pantalon">
+                        </label>
+                        <label for="CurvaPantalon">Curva del Pantalon
+                            <input class="check" type="checkbox" name="CurvaPantalon" id="CurvaPantalon">
+                        </label>
+                        <!-- <label for="Solapa">Solapa
+                            <input type="checkbox" name="Solapa" id="Solapa">
+                        </label> checar partes que puede llevar una falda-->
+                    </form>
                 </div>
-                <label for="Solapa">Solapa
-                    <input type="checkbox" name="Solapa" id="Solapa">
-                </label>
-                <label for="Hombros">Hombros
-                    <input type="checkbox" name="Hombros" id="Hombros">
-                </label>
-                <label for="Espalda">Espalda
-                    <input type="checkbox" name="Espalda" id="Espalda">
-                </label>
-                <label for="Mangas">Mangas
-                    <input type="checkbox" name="Mangas" id="Mangas">
-                </label>
-                <label for="Broches">Broches
-                    <input type="checkbox" name="Broches" id="Broches">
-                </label>
-                <label for="BrochesChaleco">Broches Chaleco
-                    <input type="checkbox" name="BrochesChaleco" id="BrochesChaleco">
-                </label>
-                <label for="BolsasChicas">Bolsas Chicas
-                    <input type="checkbox" name="BolsasChicas" id="BolsasChicas">
-                </label>
-                <label for="BolsasGrandes">Bolsas Grandes
-                    <input type="checkbox" name="BolsaGrandes" id="BolsasGrandes">
-                </label>
-                <label for="Pantalon">Pantalon
-                    <input type="checkbox" name="Pantalon" id="Pantalon">
-                </label>
-                <label for="CurvaPantalon">Curva del Pantalon
-                    <input type="checkbox" name="CurvaPantalon" id="CurvaPantalon">
-                </label>
-                <!-- <label for="Solapa">Solapa
-                    <input type="checkbox" name="Solapa" id="Solapa">
-                </label> checar partes que puede llevar una falda-->
-                <div><!--Precios reflejados-->
+                <div class="prices"><!--Precios reflejados-->
                     
                      <div >subtotal = $ <p id="div"></p> </div>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
     <footer class="footer">
