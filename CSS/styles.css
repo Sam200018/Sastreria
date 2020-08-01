@@ -322,3 +322,63 @@ body {
   height: 200px;
   background-color: #f9bc60;
 }
+
+/* cotización */
+.traje{
+  display: flex;
+  margin: 20px;
+  text-transform: uppercase;
+  justify-content: center;
+  height: 400px;
+}
+.traje_img.saco{
+  border:1px solid gray;
+  height: 400px;
+  width: 50%;
+  margin-right: 10px;
+}
+.traje_cotizacion{
+  border: 3px solid #4f8a8b;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 20px;
+}
+.traje_cotizacion_title{
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #4f8a8b;
+}
+.traje_cotizacion_selection{
+  display: flex;
+  margin: 10px;
+}
+.cotizacion_selection_form{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  margin-bottom: 5px;
+}
+.opciones{
+  position: static;
+  font-family: inherit;
+  height: 30px;
+  color: white;
+  background-color: #24a19c;
+}
+.opciones select {
+  display: none; /*hide original SELECT element: */
+}
+.numbers{
+  position: static;
+  font-family: inherit;
+  height: 23px;
+  color: white;
+  background-color: #24a19c;
+  width: 35px;
+}
+
+.check{
+  width: 15px;
+  height: 15px;
+}
