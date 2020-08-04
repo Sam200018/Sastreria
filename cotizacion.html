@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <a class="header_logo" href="/">
-            <img src="/images/LogoSastreriaC.svg" alt="Logo Sastreria" />
+            <img src="images/LogoSastreriaC.svg" alt="Logo Sastreria" />
         </a>
         <nav class="header_container">
                 <a class="header_nav-item" href="cotizacion.html">Cotización</a>
@@ -39,15 +39,15 @@
                 <div class="traje_cotizacion_selection_principal_data">
                     <form class="cotizacion_selection_form">
                         <label for="Telas">tipo de tela
-                            <select class="opciones" name="telas" id="telas">
+                            <select class="opciones" name="opciones" id="telas">
                                 <option value="0" selected>Selecione una tela</option>
-                                <option value="1">Personalizada (Hechura)</option>
-                                <option value="2">Grano Original</option>
-                                <option value="3">Grano Lavable</option>
-                                <option value="4">Tricotina</option>
-                                <option value="5">Tricotina Economica</option>
-                                <option value="6">Top Santiago</option>
-                                <option value="7">Top Santiago Rayado(166)</option>
+                                <option value="2300">Personalizada (Hechura)</option>
+                                <option value="4400">Grano Original</option>
+                                <option value="3600">Grano Lavable</option>
+                                <option value="3600">Tricotina</option>
+                                <option value="2900">Tricotina Economica</option>
+                                <option value="3300">Top Santiago</option>
+                                <option value="3400">Top Santiago Rayado(166)</option>
                             </select>
                         </label>
                         <label for="numero de trajes">Numero trajes 
@@ -73,6 +73,9 @@
                 <div class="traje_cotizacion_selection prices">
                     <div id="precioTela"></div>
                     <div id="trajesXN"></div>
+                    <div id="saco"></div>
+                    <div id="chaleco"></div>
+                    <div id="pantalon"></div>
                     <button id="btnEmpezar" class="btn-start" onclick="cotizar()">Calcular</button>
                 </div>
             </div>
@@ -180,5 +183,5 @@
             <a href="https://www.facebook.com/sastreriabb" class="facebook">facebook</a>
     </footer>
 </body>
-<script src="/JS/cotizacion.js"></script>
+<script src="JS/cotizacion.js"></script>
 </html>
