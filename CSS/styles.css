@@ -367,6 +367,10 @@ body {
 label{
   margin-bottom: 10px;
 }
+.traje_cotizacion_selection.prices{
+  display: flex;
+  flex-direction: column;
+}
 .opciones{
   position: static;
   font-family: inherit;
@@ -396,3 +400,6 @@ label{
   font-size: 10px;
 }
 
+.ocultar{
+  display: none;
+}

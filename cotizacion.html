@@ -41,7 +41,7 @@
                         <label for="Telas">tipo de tela
                             <select class="opciones" name="telas" id="telas">
                                 <option value="0" selected>Selecione una tela</option>
-                                <option value="1">Personalizada (Echura)</option>
+                                <option value="1">Personalizada (Hechura)</option>
                                 <option value="2">Grano Original</option>
                                 <option value="3">Grano Lavable</option>
                                 <option value="4">Tricotina</option>
@@ -51,7 +51,7 @@
                             </select>
                         </label>
                         <label for="numero de trajes">Numero trajes 
-                            <input class="numbers" type="number">
+                            <input class="numbers" type="number" id="number">
                         </label>
                         <label for="Nacional">Envio Nacional
                             <input class="check" type="checkbox" name="envioNac" value="envio">
@@ -71,7 +71,9 @@
                     </form>
                 </div>
                 <div class="traje_cotizacion_selection prices">
-                    <p>hola soy el precio</p>
+                    <div id="precioTela"></div>
+                    <div id="trajesXN"></div>
+                    <button id="btnEmpezar" class="btn-start" onclick="cotizar()">Calcular</button>
                 </div>
             </div>
         </div>
