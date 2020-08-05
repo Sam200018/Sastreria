@@ -7,29 +7,28 @@ let saco = document.getElementsByName("Saco1")[0];
 let chaleco = document.getElementsByName("Chaleco2")[0];
 let pantalon = document.getElementsByName("Pantalon3")[0];
 
-
-
-
-
 // funciones dinámicas para poder hacer los cambios en el momento
 tipoDeTela.addEventListener("change", (event) => {
   const resultado = document.getElementById("precioTela");
-  let local=event.target.value
+  let local = event.target.value;
   resultado.innerText = `$${local}`;
-  localStorage.setItem("precioTela",parseInt(event.target.value, 10))
-
+  localStorage.setItem("precioTela", parseInt(event.target.value, 10));
 });
 
-number.onchange=Ntrajes;
-function Ntrajes(){
-  let tela=localStorage.getItem("precioTela");
-  let trajes=parseInt(tela,10)*number.value;
-  let suits=document.getElementById("trajesXN");
-  suits.innerText=`$${trajes}`
-  localStorage.setItem("nTrajes",trajes)
+number.onchange = Ntrajes;
+function Ntrajes() {
+  if(tipoDeTela.value==='0' && number.value<='0'){
+    alert("Selecciona una opcion de tela valido")
+  }else if(tipoDeTela.value==='0' && number.value>='0'){
+    alert("Seleciona un tipo de tela primero")
+  }else{
+    let tela = localStorage.getItem("precioTela");
+    let trajes = parseInt(tela, 10) * number.value;
+    let suits = document.getElementById("trajesXN");
+    suits.innerText = `$${trajes}`;
+    localStorage.setItem("nTrajes", trajes);
+  }
 }
-
-
 
 seOye.onchange = MXN;
 function MXN() {
@@ -49,23 +48,46 @@ function USD() {
   }
 }
 
-saco.onchange=precio;
-function precio(){
-  if(saco.checked===true){
-    let resultado= document.getElementById("saco");
-    resultado.innerText="✓"
-  }else{
-    let resultado= document.getElementById("saco");
-    resultado.innerText="x  -$200"
-    localStorage.setItem("saco",-200)
+saco.onchange = precio;//escuchador de eventos de las piezas del saco
+function precio() {
+  let resultado2 = document.getElementById("saco");
+  if (saco.checked === false) {
+    resultado2.innerText = "x  -$200";
+    localStorage.setItem("saco", -200);
+  } else {
+    resultado2.innerText = "✓";
+    localStorage.setItem("saco", 0);
   }
 }
 
+chaleco.onchange = precioCH;
+function precioCH() {
+  let resultado2 = document.getElementById("chaleco");
+  if (chaleco.checked === false) {
+    resultado2.innerText = "x  -$200";
+    localStorage.setItem("chaleco", -200);
+  } else {
+    resultado2.innerText = "✓";
+    localStorage.setItem("chaleco", 0);
+}
+}
 
+pantalon.onchange=precioP
+function precioP(){
+  let resultado3 = document.getElementById("pantalon");
+  if (pantalon.checked === false) {
+    resultado3.innerText = "x  -$200";
+    localStorage.setItem("pantalon", -200);
+  } else {
+    resultado3.innerText = "✓";
+    localStorage.setItem("pantalon", 0);
+  }
+}
 
-
-
-
+function mostarSubprecio(numeroDeTrajes,saco,chaleco,pantalon,elemento){
+  let element=document.getElementById(elemento)
+  console.log(element)
+}
 // const cotizar = () => {
 //   let tipoDeTela = document.getElementById("telas").value;
 //   let envio = document.getElementsByName("envioNac")[0];
