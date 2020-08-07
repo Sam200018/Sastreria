@@ -3,7 +3,7 @@ body {
   font-family: "Barlow", sans-serif;
   margin: 0px;
   width: 100%;
-  background-color: #e4e3e3 ;
+  background-color: #e4e3e3;
 }
 .header {
   position: fixed;
@@ -11,7 +11,7 @@ body {
   left: 0;
   width: 100%;
   display: flex;
-  background-color: #E8E8EA ;
+  background-color: #e8e8ea;
   height: 95px;
 }
 .header_logo img {
@@ -51,17 +51,17 @@ body {
   align-items: center;
   width: 100%;
 }
-.hero_container.img{
+.hero_container.img {
   background-image: url("/images/hero.JPG");
   background-position: center;
   background-size: cover;
 }
-.hero_title{
+.hero_title {
   align-self: center;
   font-size: 30px;
   text-transform: uppercase;
 }
-                  
+
 .hero_container-botton {
   background-color: #d65a31;
   width: 168px;
@@ -74,7 +74,7 @@ body {
 }
 .footer {
   height: 80px;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   display: flex;
   text-align: right;
   justify-content: space-evenly;
@@ -91,7 +91,6 @@ body {
 .footer a:hover {
   text-decoration: underline;
 }
-
 
 /* homepage */
 .sytles_container {
@@ -209,79 +208,79 @@ body {
 }
 
 /* ServicesPage */
-.services{
+.services {
   margin-bottom: 20px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.services_title{
+.services_title {
   margin-top: 5px;
   font-size: 25px;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-.services_container{
+.services_container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.services_container_img{
+.services_container_img {
   border: 1px solid seagreen;
   height: 600px;
   width: 40%;
 }
-.services_container_description{
+.services_container_description {
   width: 40%;
   padding: 20px;
   text-transform: uppercase;
   font-size: 20px;
   text-align: justify;
 }
-.services_container_img.bordado{
+.services_container_img.bordado {
   background-image: url(/images/BordadoC.jpg);
   background-position: center;
   background-size: cover;
 }
-.services_container_img.puntada{
+.services_container_img.puntada {
   background-image: url(/images/puntada.JPG);
   background-position: center;
-  background-size: cover; 
+  background-size: cover;
 }
 
 /* QuienesSomos Page */
-.ourId{ 
+.ourId {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
 }
-.ourId_title{
+.ourId_title {
   font-size: 25px;
   text-transform: uppercase;
 }
-.ourId_description{
+.ourId_description {
   font-size: 20px;
   text-transform: uppercase;
   text-align: justify;
 }
-.ourVision{
+.ourVision {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 30px 20px 20px 20px;
 }
-.ourVision_title{
+.ourVision_title {
   font-size: 25px;
   text-transform: uppercase;
 }
-.ourVision_description{
+.ourVision_description {
   font-size: 20px;
   text-align: justify;
   text-transform: uppercase;
 }
-.ourVision_container{
+.ourVision_container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -289,25 +288,25 @@ body {
   text-transform: uppercase;
   font-size: 15px;
 }
-.details_container{
+.details_container {
   text-align: center;
 }
-.details_container_img.best{
+.details_container_img.best {
   object-fit: cover;
 }
-.details_container_img .durability{
+.details_container_img .durability {
   object-fit: cover;
 }
-.ourCostomers{
+.ourCostomers {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.ourCostomers_title{
+.ourCostomers_title {
   font-size: 25px;
   text-transform: uppercase;
 }
-.ourCostumberes_container{
+.ourCostumberes_container {
   margin: 0 20px;
   display: inherit;
   flex-direction: row;
@@ -316,7 +315,7 @@ body {
   justify-content: space-between;
   height: 150px;
 }
-.materials_img{
+.materials_img {
   border: 1px solid gray;
   width: 100%;
   height: 200px;
@@ -324,54 +323,63 @@ body {
 }
 
 /* cotización */
-.traje{
+.traje {
   display: flex;
   margin-bottom: 40px;
   text-transform: uppercase;
   justify-content: center;
   height: 500px;
 }
-.traje_img{
-  border:1px solid gray;
+.traje_img {
+  border: 1px solid gray;
   height: 500px;
   width: 600px;
   margin-right: 10px;
 }
-.traje_img.saco{
+.traje_img.saco {
   /* imgen del caso */
 }
-.traje_cotizacion{
+.traje_cotizacion {
   border: 3px solid #d65a31;
   border-radius: 20px;
   font-size: 20px;
   width: 500px;
 }
-.traje_cotizacion_title{
+.traje_cotizacion_title {
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 3px solid #d65a31;
   margin-top: 10px;
 }
-.traje_cotizacion_selection{
+.traje_cotizacion_selection {
   display: flex;
   margin: 10px;
   height: 70%;
 }
-.traje_cotizacion_selection_principal_data{
+.traje_cotizacion_selection_principal_data {
   width: 325px;
 }
-.cotizacion_selection_form{
+.cotizacion_selection_form {
   display: flex;
   flex-direction: column;
 }
-label{
+label {
   margin-bottom: 10px;
 }
-.traje_cotizacion_selection.prices{
+.traje_cotizacion_selection.prices {
+  margin-top: 85px;
   display: flex;
   flex-direction: column;
 }
-.opciones{
+.box{
+  border: 3px solid #393e46;
+  border-radius: 10px;
+  align-self: center;
+  width: 125px;
+  height: 30px;
+  margin-top: 10px;
+}
+.opciones {
   position: static;
   font-family: inherit;
   height: 30px;
@@ -381,7 +389,7 @@ label{
 .opciones select {
   display: none; /*hide original SELECT element: */
 }
-.numbers{
+.numbers {
   position: static;
   font-family: inherit;
   height: 23px;
@@ -389,17 +397,16 @@ label{
   background-color: #4b5d67;
   width: 35px;
 }
-.check{
+.check {
   width: 15px;
   height: 15px;
 }
-.prices{
+.prices {
   width: 300px;
 }
-.littlewords{
+.littlewords {
   font-size: 10px;
 }
-
-.ocultar{
+.ocultar {
   display: none;
 }

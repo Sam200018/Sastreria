@@ -38,6 +38,12 @@
             <div class="traje_cotizacion_selection">
                 <div class="traje_cotizacion_selection_principal_data">
                     <form class="cotizacion_selection_form">
+                        <label for="Nacional">Envio Nacional
+                            <input class="check" type="checkbox" name="envioNac" value="envio">
+                        </label>
+                        <label for="Internacional">Envio Internacional
+                            <input class="check" type="checkbox" name="envioInter" value="envio">
+                        </label>
                         <label for="Telas">tipo de tela
                             <select class="opciones" name="opciones" id="telas">
                                 <option value="0" selected>Selecione una tela</option>
@@ -53,12 +59,6 @@
                         <label for="numero de trajes">Numero trajes 
                             <input class="numbers" type="number" id="number">
                         </label>
-                        <label for="Nacional">Envio Nacional
-                            <input class="check" type="checkbox" name="envioNac" value="envio">
-                        </label>
-                        <label for="Internacional">Envio Internacional
-                            <input class="check" type="checkbox" name="envioInter" value="envio">
-                        </label>
                         <label for="Saco">Saco
                             <input class="check" type="checkbox" name="Saco1" value="Saco1" checked>
                         </label>
@@ -71,12 +71,11 @@
                     </form>
                 </div>
                 <div class="traje_cotizacion_selection prices">
-                    <div id="precioTela"></div>
-                    <div id="trajesXN"></div>
-                    <div id="saco">✓</div>
-                    <div id="chaleco">✓</div>
-                    <div id="pantalon">✓</div>
-                    <div di="subprecio1"></div>
+                    <div id="precioTela" class="box"></div>
+                    <div id="trajesXN" class="box"></div>
+                    <div id="saco"class="box">✓</div>
+                    <div id="chaleco"class="box">✓</div>
+                    <div id="pantalon"class="box">✓</div>
                 </div>
             </div>
         </div>
@@ -169,7 +168,7 @@
                         </label> checar partes que puede llevar una falda-->
                     </form>
                 </div>
-                <div class="prices"><!--Precios reflejados-->
+                <div class="traje_cotizacion_selection prices"><!--Precios reflejados-->
                     
                      <div >subtotal = $ <p id="div"></p> </div>
                 </div>
@@ -182,7 +181,7 @@
             <a href="https://api.whatsapp.com/send?phone=525587869537">whatsapp</a>
             <a href="https://www.facebook.com/sastreriabb" class="facebook">facebook</a>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>//consumimos un cdnJS para poder usar sweetAlerts 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script><!-- consumimos un cdnJS para poder usar sweetAlerts  -->
     <script src="JS/cotizacion.js"></script>
 </body>
 </html>
