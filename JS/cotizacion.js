@@ -6,61 +6,90 @@ const number = document.getElementById("number");
 const saco = document.getElementsByName("Saco1")[0];
 const chaleco = document.getElementsByName("Chaleco2")[0];
 const pantalon = document.getElementsByName("Pantalon3")[0];
+
+//detalles sobre el diseño del traje
 const precio1 = document.getElementById("subprecio1");
-const pesoMx='MXN'
-const dolarUS= 'USD'
+const bordado = document.getElementsByName("Bordado")[0];
+const diseñoB = document.getElementById("Diseño");
+const solapaB = document.getElementById("Solapa");
+const hombrosB = document.getElementById("Hombros");
+const espaldaB = document.getElementById("Espalda");
+const mangasB = document.getElementById("Mangas");
+const brochesB = document.getElementById("Broches");
+const brochesChalB = document.getElementById("BrochesChaleco");
+const bolsasChB = document.getElementById("BolsasChicas");
+const bolsasGB = document.getElementById("BolsasGrandes");
+const pantalonB = document.getElementById("Pantalon");
+const curvaB = document.getElementById("CurvaPantalon");
+
+//lugares de ocupación del diseño
+const greca = document.getElementsByName("Greca")[0];
+const diseñoG = document.getElementById("DiseñoG");
+const solapaG = document.getElementById("SolapaG");
+const hombroG = document.getElementById("HombrosG");
+const espaldaG = document.getElementById("EspaldaG");
+const mangasG = document.getElementById("MangasG")
+const brochesG = document.getElementById("BrochesG");
+const brochesChalG = document.getElementById("BrochesChalecoG");
+const bolsasChG = document.getElementById("BolsasChicasG");
+const bolsasGG = document.getElementById("BolsasGrandesG");
+const pantalonG = document.getElementById("PantalonG");
+const cuervaG = document.getElementById("CurvaPantalonG");
+
+
+
+const pesoMx = "MXN";
+const dolarUS = "USD";
 
 let dolar;
 
-fetch("https://api.exchangeratesapi.io/latest?base=USD&symbols=MXN")/*consumimos una API para saber el precio del dolar USD */
-.then(respuesta=>respuesta.json())
-.then(respuestaDecodificada=>{
-  dolar= respuestaDecodificada.rates.MXN;
-  const fechaActualizada= respuestaDecodificada.date;
-  console.log(fechaActualizada);
+fetch(
+  "https://api.exchangeratesapi.io/latest?base=USD&symbols=MXN"
+) /*consumimos una API para saber el precio del dolar USD */
+  .then((respuesta) => respuesta.json())
+  .then((respuestaDecodificada) => {
+    dolar = respuestaDecodificada.rates.MXN;
+    const fechaActualizada = respuestaDecodificada.date;
+    console.log(fechaActualizada);
     console.log(dolar);
-  })
-
+  });
 
 seOye.onchange = MXN;
 function MXN() {
   if (seOye.checked === true) {
     envioInter.classList.add("ocultar");
-    
-    
+    tipoDeTela.addEventListener("change", mostarTela);
   } else if (seOye.checked === false) {
     envioInter.classList.remove("ocultar");
+    location.reload(true);
   }
 }
 
 envioInter.onchange = USD;
 function USD() {
   if (envioInter.checked === true) {
+    tipoDeTela.addEventListener("change", mostarTela);
     seOye.classList.add("ocultar");
   } else if (envioInter.checked === false) {
     seOye.classList.remove("ocultar");
+    location.reload(true);
   }
 }
-  
 
 // funciones dinámicas para poder hacer los cambios en el momento
-tipoDeTela.addEventListener("change", (event) => {
+function mostarTela(event) {
   const resultado = document.getElementById("precioTela");
   let local = event.target.value;
-  let conversion=parseInt(local)
-  if(seOye.checked===true){
+  let conversion = parseInt(local);
+  if (seOye.checked === true) {
     resultado.innerText = `$${local} ${pesoMx}`;
     localStorage.setItem("precioTela", parseInt(event.target.value, 10));
-  }else if(envioInter.checked===true){
-    conversion=conversion/dolar;
-    resultado.innerText= `$${conversion.toFixed(2)} ${dolarUS}`;
-    localStorage.setItem("precioTela",conversion.toFixed(2));
-    console.log(conversion)
+  } else if (envioInter.checked === true) {
+    conversion = conversion / dolar;
+    resultado.innerText = `$${conversion.toFixed(2)} ${dolarUS}`;
+    localStorage.setItem("precioTela", conversion.toFixed(2));
   }
-
-
-});
-
+}
 number.onchange = Ntrajes;
 function Ntrajes() {
   if (tipoDeTela.value === "0" && number.value <= "0") {
@@ -69,13 +98,21 @@ function Ntrajes() {
     alert("Seleciona un tipo de tela primero");
   } else {
     let tela = localStorage.getItem("precioTela");
-    let trajes = parseInt(tela, 10) * number.value;
+    let trajes = parseFloat(tela, 10) * number.value;
     let suits = document.getElementById("trajesXN");
-    suits.innerText = `$${trajes}`;
-    localStorage.setItem("nTrajes", trajes);
+
+    if (seOye.checked === true) {
+      //pesos mexicanos
+      suits.innerText = `$${trajes}${pesoMx}`;
+      localStorage.setItem("nTrajes", trajes);
+    } else if (envioInter.checked === true) {
+      //dolares americanos
+      trajes = trajes.toFixed(2);
+      suits.innerText = `$${trajes}${dolarUS}`;
+      localStorage.setItem("nTrajes", trajes);
+    }
   }
 }
-
 
 saco.onchange = precio; //escuchador de eventos de las piezas del saco
 function precio() {
@@ -113,58 +150,38 @@ function precioP() {
   }
 }
 
+//Lugares de ocupacion del diseño
+bordado.onchange = bloq;
+function bloq() {
+  if (bordado.checked === true) {
+    remover();
+  }
+  else if(bordado.checked === false){
+    adding();
+  }
+}
 
-
-// const cotizar = () => {
-//   let tipoDeTela = document.getElementById("telas").value;
-//   let envio = document.getElementsByName("envioNac")[0];
-//   let envioInter = document.getElementsByName("envioInter")[0];
-
-//   var precio;
-//   if (tipoDeTela === "1") {
-//     precio = 2300;
-//   } else if (tipoDeTela === "2") {
-//     precio = 4400;
-//   } else if (tipoDeTela === "3") {
-//     precio = 3300;
-//   } else if (tipoDeTela === "4") {
-//     precio = 3600;
-//   } else if (tipoDeTela === "5") {
-//     precio = 2900;
-//   } else if (tipoDeTela === "6") {
-//     precio = 3300;
-//   } else if (tipoDeTela === "7") {
-//     precio = 3400;
-//   }
-//   console.log(precio);
-//   let Ntrajes = number * precio;
-//   document.getElementById(
-//     "precioTela"
-//   ).innerHTML = `<p>$ ${precio}</p>`; /*Así estariamos regresando los precios en medio de equitetas */
-
-//   document.getElementById("trajesXN").innerHTML = `<p>$ ${Ntrajes}</p>`;
-
-// };
-
-// // var input = document.getElementsByName("telas");
-// // console.log(input.selectedIndex)
-// // document.getElementById("div").outerHTML = GRANO_LAVABLE;
-// // coviene más el outerHTML por que hacemos que se ponga los elementos que queremos en el html sin más problemas listo
-// // (function(){
-// //   "use strict";
-
-// //   document.addEventListener('DOMContentLoaded',function(){
-// //     console.log('listo')
-// //     const TRICOTINA_ECONOMICA = 2900,
-// //     TOP_LISO = 3300,
-// //     TOP_166 = 3400,
-// //     TRICOTINA_ORIGINAL = 3600,
-// //     GRANO = 4400,
-// //     GRANO_LAVABLE = 3600,
-// //     HECHURA = 2300;
-
-// //     let tipoDeTela= document.getElementById("telas").value;
-// //     console.log(tipoDeTela)
-
-// //   });//Dom Content loaded
-// // })();
+function remover() {
+  solapaB.classList.remove("ocultar");
+  hombrosB.classList.remove("ocultar");
+  espaldaB.classList.remove("ocultar");
+  mangasB.classList.remove("ocultar");
+  brochesB.classList.remove("ocultar");
+  brochesChalB.classList.remove("ocultar");
+  bolsasChB.classList.remove("ocultar");
+  bolsasGB.classList.remove("ocultar");
+  pantalonB.classList.remove("ocultar");
+  curvaB.classList.remove("ocultar");
+}
+function adding(){
+  solapaB.classList.add("ocultar");
+  hombrosB.classList.add("ocultar");
+  espaldaB.classList.add("ocultar");
+  mangasB.classList.add("ocultar");
+  brochesB.classList.add("ocultar");
+  brochesChalB.classList.add("ocultar");
+  bolsasChB.classList.add("ocultar");
+  bolsasGB.classList.add("ocultar");
+  pantalonB.classList.add("ocultar");
+  curvaB.classList.add("ocultar");
+}

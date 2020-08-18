@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css">
     <title>Cotización</title>
 </head>
+
 <body>
     <header class="header">
         <a class="header_logo" href="/">
             <img src="images/LogoSastreriaC.svg" alt="Logo Sastreria" />
         </a>
         <nav class="header_container">
-                <a class="header_nav-item" href="cotizacion.html">Cotización</a>
-                <a class="header_nav-item" href="/">Como Medirse</a>
-                <a class="header_nav-item" href="servicios.html">Servicios</a>
-                <a class="header_nav-item" href="/">Stock</a>
-                <a class="header_nav-item" href="quienesSomos.html">¿Quiénes Somos?</a>
+            <a class="header_nav-item" href="cotizacion.html">Cotización</a>
+            <a class="header_nav-item" href="/">Como Medirse</a>
+            <a class="header_nav-item" href="servicios.html">Servicios</a>
+            <a class="header_nav-item" href="/">Stock</a>
+            <a class="header_nav-item" href="quienesSomos.html">¿Quiénes Somos?</a>
         </nav>
     </header>
     <main class="hero">
@@ -28,12 +30,12 @@
         </p>
     </main>
     <section class="traje">
-        <div class="traje_img saco">imagen de saco del traje</div>
+
         <div class="traje_cotizacion">
             <p class="traje_cotizacion_title">
                 <span>
                     Completa los siguientes Datos
-                </span> 
+                </span>
             </p>
             <div class="traje_cotizacion_selection">
                 <div class="traje_cotizacion_selection_principal_data">
@@ -56,7 +58,7 @@
                                 <option value="3400">Top Santiago Rayado(166)</option>
                             </select>
                         </label>
-                        <label for="numero de trajes">Numero trajes 
+                        <label for="numero de trajes">Numero trajes
                             <input class="numbers" type="number" id="number">
                         </label>
                         <label for="Saco">Saco
@@ -73,15 +75,15 @@
                 <div class="traje_cotizacion_selection prices">
                     <div id="precioTela" class="box"></div>
                     <div id="trajesXN" class="box"></div>
-                    <div id="saco"class="box">✓</div>
-                    <div id="chaleco"class="box">✓</div>
-                    <div id="pantalon"class="box">✓</div>
+                    <div id="saco" class="box">✓</div>
+                    <div id="chaleco" class="box">✓</div>
+                    <div id="pantalon" class="box">✓</div>
                 </div>
             </div>
         </div>
     </section>
     <section class="traje">
-        <div class="traje_img chaleco">imagen del chaleco del traje</div>
+
         <div class="traje_cotizacion">
             <p class="traje_cotizacion_title">
                 <span>
@@ -90,40 +92,66 @@
             </p>
             <div class="traje_cotizacion_selection">
                 <div class="traje_cotizacion_selection_principal_data">
-                    <form class="cotizacion_selection_form"><!--esto es para separar la cuestion de selección de la parte de los costos -->
-                            <label for="Bordado">Bordado
-                                <input class="check" type="checkbox" name="Bordado" value="Bordado">
-                            </label>
-                            <label for="Greca">Greca
-                                <input class="check" type="checkbox" name="Greca" value="Greca">
-                            </label>
-                            <label for="Botonadura">Botonadura
-                                <input class="check" type="checkbox" name="Botonadura" value="Botonadura">
-                            </label>
-                            <label for="Diseño">Diseño
-                                <input class="numbers" type="number" name="Diseño" id="Diseño">
-                            </label>
-                            <label for="Tamanio">Tamaño
-                                <select class="opciones" name="Tamanio" id="Tamanio">
-                                    <option value="0">Grande</option>
-                                    <option value="1">Mediano</option>
-                                    <option value="2">Grande</option>
-                                </select>
-                            </label>
-                            <label for="BordadoPerso">Bordado Personalizado
-                                <input class="check" type="checkbox" name="Perso" id="Perso">
-                            </label>
+                    <form class="cotizacion_selection_form">
+                        <!--esto es para separar la cuestion de selección de la parte de los costos -->
+                        <label for="Bordado">Bordado
+                            <input class="check" type="checkbox" name="Bordado" value="Bordado">
+                        </label>
+                        <label for="Diseño Bordado">Diseño Bordado
+                            <input class="numbers" type="number" name="Diseño" id="Diseño">
+                        </label>
+                        <label for="Solapa">Solapa
+                            <input class="ocultar check" type="checkbox" name="Solapa" id="Solapa">
+                        </label>
+                        <label for="Hombros">Hombros
+                            <input class="ocultar check" type="checkbox" name="Hombros" id="Hombros">
+                        </label>
+                        <label for="Espalda">Espalda
+                            <input class="ocultar check" type="checkbox" name="Espalda" id="Espalda">
+                        </label>
+                        <label for="Mangas">Mangas
+                            <input class="ocultar check" type="checkbox" name="Mangas" id="Mangas">
+                        </label>
+                        <label for="Broches">Broches
+                            <input class="ocultar check" type="checkbox" name="Broches" id="Broches">
+                        </label>
+                        <label for="BrochesChaleco">Broches Chaleco
+                            <input class="ocultar check" type="checkbox" name="BrochesChaleco" id="BrochesChaleco">
+                        </label>
+                        <label for="BolsasChicas">Bolsas Chicas
+                            <input class="ocultar check" type="checkbox" name="BolsasChicas" id="BolsasChicas">
+                        </label>
+                        <label for="BolsasGrandes">Bolsas Grandes
+                            <input class="ocultar check" type="checkbox" name="BolsaGrandes" id="BolsasGrandes">
+                        </label>
+                        <label for="Pantalon">Pantalon
+                            <input class="ocultar check" type="checkbox" name="Pantalon" id="Pantalon">
+                        </label>
+                        <label for="CurvaPantalon">Curva del Pantalon
+                            <input class="ocultar check" type="checkbox" name="CurvaPantalon" id="CurvaPantalon">
+                        </label>
                     </form>
                 </div>
                 <div class="traje_cotizacion_selection prices">
-                    <p>hola soy el precio</p>
+                    <!--Precios reflejados-->
+                    <div id="Solapa" class="box"> </div>
+                    <div id="Hombro" class="box"> </div>
+                    <div id="Espal" class="box"> </div>
+                    <div id="Manga" class="box"> </div>
+                    <div id="Broche" class="box"> </div>
+                    <div id="BrocheChal" class="box"> </div>
+                    <div id="BolsasS" class="box"> </div>
+                    <div id="BolsasL" class="box"> </div>
+                    <div id="Pants" class="box"> </div>
+                    <div id="Raduis" class="box"> </div>
                 </div>
             </div>
             <p class="littlewords">*los numeros de los diseños están en el apartado de <a href="#">stock</a></p>
+            <p class="littlewords">*los diseños pueden ser alterados o Personalizados <a href="#">stock</a></p>
         </div>
     </section>
     <section class="traje">
-        <div class="traje_img chaleco">imagén de Pantalon del traje</div>
+
         <div class="traje_cotizacion">
             <p class="traje_cotizacion_title">
                 <span>
@@ -133,55 +161,69 @@
             <div class="traje_cotizacion_selection">
                 <div class="traje_cotizacion_selection_principal_data">
                     <form class="cotizacion_selection_form">
+                        <label for="Greca">Greca
+                            <input class="check" type="checkbox" name="Greca" id="GrecaGrec">
+                        </label>
+                        <label for="Diseño Greca">Diseño Greca
+                            <input class="numbers" type="number" name="Diseño" id="DiseñoG">
+                        </label>
                         <label for="Solapa">Solapa
-                            <input class="check" type="checkbox" name="Solapa" id="Solapa">
+                            <input class="check" type="checkbox" name="Solapa" id="SolapaG">
                         </label>
                         <label for="Hombros">Hombros
-                            <input class="check" type="checkbox" name="Hombros" id="Hombros">
+                            <input class="check" type="checkbox" name="Hombros" id="HombrosG">
                         </label>
                         <label for="Espalda">Espalda
-                            <input class="check" type="checkbox" name="Espalda" id="Espalda">
+                            <input class="check" type="checkbox" name="Espalda" id="EspaldaG">
                         </label>
                         <label for="Mangas">Mangas
-                            <input class="check" type="checkbox" name="Mangas" id="Mangas">
+                            <input class="check" type="checkbox" name="Mangas" id="MangasG">
                         </label>
                         <label for="Broches">Broches
-                            <input class="check" type="checkbox" name="Broches" id="Broches">
+                            <input class="check" type="checkbox" name="Broches" id="BrochesG">
                         </label>
                         <label for="BrochesChaleco">Broches Chaleco
-                            <input class="check" type="checkbox" name="BrochesChaleco" id="BrochesChaleco">
+                            <input class="check" type="checkbox" name="BrochesChaleco" id="BrochesChalecoG">
                         </label>
                         <label for="BolsasChicas">Bolsas Chicas
-                            <input class="check" type="checkbox" name="BolsasChicas" id="BolsasChicas">
+                            <input class="check" type="checkbox" name="BolsasChicas" id="BolsasChicasG">
                         </label>
                         <label for="BolsasGrandes">Bolsas Grandes
-                            <input class="check" type="checkbox" name="BolsaGrandes" id="BolsasGrandes">
+                            <input class="check" type="checkbox" name="BolsaGrandes" id="BolsasGrandesG">
                         </label>
                         <label for="Pantalon">Pantalon
-                            <input class="check" type="checkbox" name="Pantalon" id="Pantalon">
+                            <input class="check" type="checkbox" name="Pantalon" id="PantalonG">
                         </label>
                         <label for="CurvaPantalon">Curva del Pantalon
-                            <input class="check" type="checkbox" name="CurvaPantalon" id="CurvaPantalon">
+                            <input class="check" type="checkbox" name="CurvaPantalon" id="CurvaPantalonG">
                         </label>
-                        <!-- <label for="Solapa">Solapa
-                            <input type="checkbox" name="Solapa" id="Solapa">
-                        </label> checar partes que puede llevar una falda-->
                     </form>
                 </div>
-                <div class="traje_cotizacion_selection prices"><!--Precios reflejados-->
-                    
-                     <div >subtotal = $ <p id="div"></p> </div>
+                <div class="traje_cotizacion_selection prices">
+                    <!--Precios reflejados-->
+                    <div id="Solapa" class="box"> </div>
+                    <div id="Hombro" class="box"> </div>
+                    <div id="Espal" class="box"> </div>
+                    <div id="Manga" class="box"> </div>
+                    <div id="Broche" class="box"> </div>
+                    <div id="BrocheChal" class="box"> </div>
+                    <div id="BolsasS" class="box"> </div>
+                    <div id="BolsasL" class="box"> </div>
+                    <div id="Pants" class="box"> </div>
+                    <div id="Raduis" class="box"> </div>
                 </div>
             </div>
         </div>
     </section>
     <footer class="footer">
-            <a href="/">Servicio Al Cliente</a>
-            <a href="/">Atención Al Cliente</a>
-            <a href="https://api.whatsapp.com/send?phone=525587869537">whatsapp</a>
-            <a href="https://www.facebook.com/sastreriabb" class="facebook">facebook</a>
+        <a href="/">Servicio Al Cliente</a>
+        <a href="/">Atención Al Cliente</a>
+        <a href="https://api.whatsapp.com/send?phone=525587869537">whatsapp</a>
+        <a href="https://www.facebook.com/sastreriabb" class="facebook">facebook</a>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script><!-- consumimos un cdnJS para poder usar sweetAlerts  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <!-- consumimos un cdnJS para poder usar sweetAlerts  -->
     <script src="JS/cotizacion.js"></script>
 </body>
+
 </html>

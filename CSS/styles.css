@@ -25,6 +25,7 @@ body {
   align-items: center;
   width: 100%;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .header_nav-item {
   text-decoration: none;
@@ -328,7 +329,7 @@ body {
   margin-bottom: 40px;
   text-transform: uppercase;
   justify-content: center;
-  height: 500px;
+  height: auto;
 }
 .traje_img {
   border: 1px solid gray;
@@ -343,7 +344,7 @@ body {
   border: 3px solid #d65a31;
   border-radius: 20px;
   font-size: 20px;
-  width: 500px;
+  max-width: 500px;
 }
 .traje_cotizacion_title {
   text-align: center;
@@ -354,7 +355,7 @@ body {
 .traje_cotizacion_selection {
   display: flex;
   margin: 10px;
-  height: 70%;
+  height: auto;
 }
 .traje_cotizacion_selection_principal_data {
   width: 325px;
@@ -364,19 +365,25 @@ body {
   flex-direction: column;
 }
 label {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 .traje_cotizacion_selection.prices {
   margin-top: 85px;
   display: flex;
   flex-direction: column;
 }
+.traje_cotizacion_selection.price {
+  margin-top: -18px;
+  display: flex;
+  flex-direction: column;
+}
+
 .box{
   border: 3px solid #393e46;
   border-radius: 10px;
   align-self: center;
   width: 125px;
-  height: 30px;
+  height: 26px;
   margin-top: 10px;
 }
 .opciones {
