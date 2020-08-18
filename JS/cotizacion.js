@@ -58,7 +58,12 @@ seOye.onchange = MXN;
 function MXN() {
   if (seOye.checked === true) {
     envioInter.classList.add("ocultar");
+
+
     tipoDeTela.addEventListener("change", mostarTela);
+    saco.onchange = precio; //escuchador de eventos de las piezas del saco
+    chaleco.onchange = precioCH;
+    pantalon.onchange = precioP;
   } else if (seOye.checked === false) {
     envioInter.classList.remove("ocultar");
     location.reload(true);
@@ -68,8 +73,13 @@ function MXN() {
 envioInter.onchange = USD;
 function USD() {
   if (envioInter.checked === true) {
-    tipoDeTela.addEventListener("change", mostarTela);
     seOye.classList.add("ocultar");
+
+
+    tipoDeTela.addEventListener("change", mostarTela);
+    saco.onchange= precioU;
+    chaleco.onchange = precioCHU;
+    pantalon.onchange = precioPU;
   } else if (envioInter.checked === false) {
     seOye.classList.remove("ocultar");
     location.reload(true);
@@ -90,6 +100,7 @@ function mostarTela(event) {
     localStorage.setItem("precioTela", conversion.toFixed(2));
   }
 }
+
 number.onchange = Ntrajes;
 function Ntrajes() {
   if (tipoDeTela.value === "0" && number.value <= "0") {
@@ -114,7 +125,6 @@ function Ntrajes() {
   }
 }
 
-saco.onchange = precio; //escuchador de eventos de las piezas del saco
 function precio() {
   let resultado2 = document.getElementById("saco");
   if (saco.checked === true) {
@@ -125,8 +135,20 @@ function precio() {
     localStorage.setItem("saco", -200);
   }
 }
+function precioU(){
+  let resultado2 = document.getElementById("saco");
+  if(saco.checked=== true){
+    resultado2.innerHTML= "✓";
+    localStorage.setItem("saco",0);
+  }else{
+    let redu= 200/dolar;
+    redu= redu.toFixed(2);
+    resultado2.innerText=`X -$${redu}${dolarUS}`;
+    localStorage.setItem("saco",redu);
+  }
+}
 
-chaleco.onchange = precioCH;
+
 function precioCH() {
   let resultado2 = document.getElementById("chaleco");
   if (chaleco.checked === true) {
@@ -137,8 +159,19 @@ function precioCH() {
     localStorage.setItem("chaleco", -200);
   }
 }
+function precioCHU(){
+  let resultado2 = document.getElementById("chaleco");
+  if(chaleco.checked=== true){
+    resultado2.innerHTML= "✓";
+    localStorage.setItem("chaleco",0);
+  }else{
+    let redu= 200/dolar;
+    redu= redu.toFixed(2);
+    resultado2.innerText=`X -$${redu}${dolarUS}`;
+    localStorage.setItem("chaleco",redu);
+  }
+}
 
-pantalon.onchange = precioP;
 function precioP() {
   let resultado3 = document.getElementById("pantalon");
   if (pantalon.checked === true) {
@@ -149,7 +182,19 @@ function precioP() {
     localStorage.setItem("pantalon", -200);
   }
 }
-
+function precioPU(){
+  let resultado2 = document.getElementById("pantalon");
+  if(pantalon.checked=== true){
+    resultado2.innerHTML= "✓";
+    localStorage.setItem("pantalon",0);
+  }else{
+    let redu= 200/dolar;
+    redu= redu.toFixed(2);
+    resultado2.innerText=`X -$${redu}${dolarUS}`;
+    localStorage.setItem("pantalon",redu);
+  }
+  
+}
 //Lugares de ocupacion del diseño
 bordado.onchange = bloq;
 function bloq() {
@@ -160,7 +205,15 @@ function bloq() {
     adding();
   }
 }
-
+greca.onchange= bloqG;
+function bloqG() {
+  if (greca.checked === true) {
+    removerG();
+  }
+  else if(greca.checked === false){
+    addingG();
+  }
+}
 function remover() {
   solapaB.classList.remove("ocultar");
   hombrosB.classList.remove("ocultar");
